@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Villa Abeto PDC – Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="home">
-  <!-- ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ NAVBAR -->
   <header>
     <nav>
       <a href="index.html" class="active">Home</a>
@@ -19,28 +19,24 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
-
-  <!-- ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ HERO SECTION -->
   <main>
     <section>
       <div class="carousel">
-        <img src="images/hero/cs06.webp"   alt="pool loungers"  class="active">
-        <img src="images/hero/cs04.webp"     alt="pool facade">
-        <img src="images/hero/cs07.webp"     alt="pool facade">
-        <img src="images/hero/cs08.webp"     alt="pool facade">
-        <img src="images/hero/cs12.webp"     alt="pool facade">
-        <img src="images/hero/cs13.webp"     alt="pool facade">
-        <img src="images/hero/cs20.webp"     alt="pool facade">
-        <img src="images/hero/cs25.webp"     alt="pool facade">
-        <img src="images/hero/cs27.webp"     alt="pool facade">
-        <img src="images/hero/cs33.webp"     alt="pool facade">
+        <img src="images/hero/cs06.webp" alt="pool loungers" class="active">
+        <img src="images/hero/cs04.webp" alt="pool facade">
+        <img src="images/hero/cs07.webp" alt="pool facade">
+        <img src="images/hero/cs08.webp" alt="pool facade">
+        <img src="images/hero/cs12.webp" alt="pool facade">
+        <img src="images/hero/cs13.webp" alt="pool facade">
+        <img src="images/hero/cs20.webp" alt="pool facade">
+        <img src="images/hero/cs25.webp" alt="pool facade">
+        <img src="images/hero/cs27.webp" alt="pool facade">
+        <img src="images/hero/cs33.webp" alt="pool facade">
+        <h1>Beautiful modern 4-double bedroom villa in sunny South-East Spain</h1>
       </div>
-
-      <h1>Beautiful modern 4-double bedroom villa in sunny South-East Spain</h1>
     </section>
   </main>
 
-  <!-- ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ FADE SCRIPT -->
   <script>
     const slides = document.querySelectorAll('.carousel img');
     let i = 0;
@@ -50,7 +46,7 @@
         slides[i].classList.remove('active');
         i = (i + 1) % slides.length;
         slides[i].classList.add('active');
-      }, 6000);                 // 6 s per slide
+      }, 6000); // 6 s per slide
     }
   </script>
 </body>
