@@ -1,0 +1,115 @@
+/* ─────────────────────────────────────
+   GLOBAL BASE STYLES
+────────────────────────────────────── */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+header{background:#004d40;}
+
+nav{
+  display:flex;justify-content:center;
+  gap:.75rem;padding:1rem 0;
+}
+nav a{color:#fff;text-decoration:none;font-weight:600;}
+nav a.active{text-decoration:underline;}
+
+main{padding:2rem;}
+h1{text-align:center;margin:0 0 1.5rem;line-height:1.3}
+
+/* ─────────────────────────────────────
+   GALLERY GRID & UNIFORM THUMBS
+────────────────────────────────────── */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1rem;margin:0 1rem 2rem;
+}
+.gallery-grid img{
+  width:100%;height:200px;object-fit:cover;border-radius:4px;
+}
+
+/* ─────────────────────────────────────
+   HERO CAROUSEL  (shared)
+────────────────────────────────────── */
+.carousel{
+  position:relative;width:100%;max-width:1200px;margin:0 auto;overflow:hidden;
+}
+.carousel img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .6s ease-in-out;
+}
+.carousel img.active{opacity:1}
+
+/* ─────────────────────────────────────
+   FULL-VIEWPORT HERO – HOME ONLY
+────────────────────────────────────── */
+body.home main > section:first-of-type{
+  display:flex;flex-direction:column;
+  min-height:calc(100vh - 70px);   /* navbar height offset */
+}
+body.home .carousel{flex:1 0 auto}
+
+/* ─────────────────────────────────────
+   SPLIT-SCREEN SECTIONS (About / etc.)
+────────────────────────────────────── */
+.about-hero,
+.location-hero,
+.contact-hero{
+  display:flex;flex-wrap:wrap;margin:0;
+}
+.about-hero .about-img,
+.location-hero .about-img,
+.contact-hero .about-img{
+  flex:1 1 400px;           /* image column min width */
+  min-height:320px;         /* and min height */
+}
+.about-hero .about-img img,
+.location-hero .about-img img,
+.contact-hero .about-img img{
+  width:100%;height:100%;object-fit:cover;
+}
+.about-hero .about-text,
+.location-hero .about-text,
+.contact-hero .about-text{
+  flex:1 1 400px;
+  padding:2rem 3rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+
+/* ─────────────────────────────────────
+   AVAILABILITY CALENDAR – FIT VIEWPORT
+────────────────────────────────────── */
+html,body{height:100%}
+.calendar-wrap{
+  height:calc(100vh - 120px);display:flex;   /* adjust 120 px if navbar differs */
+}
+.calendar-wrap iframe{width:100%;height:100%;border:0}
+
+/* ─────────────────────────────────────
+   CONTACT FORM
+────────────────────────────────────── */
+form{max-width:480px}
+input[type=text],
+input[type=email],
+textarea{
+  width:100%;padding:.75rem;border:1px solid #ccc;border-radius:8px;
+  margin-bottom:1rem;font-size:1rem;
+}
+textarea{min-height:140px;resize:vertical}
+button,
+input[type=submit]{
+  background:#004d40;color:#fff;border:none;padding:.75rem 1.5rem;
+  border-radius:8px;font-size:1rem;cursor:pointer;
+}
+button:hover,
+input[type=submit]:hover{background:#00695c}
