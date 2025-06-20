@@ -469,11 +469,13 @@ nav {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .calendar-mobile {
-    display: block;
-  }
-  .calendar-desktop {
-    display: none;
-  }
+.calendar-wrap {
+  padding: 2rem 1rem;
 }
+
+.calendar-wrap iframe {
+  width: 100%;
+  border: 0;
+  height: 600px;
+}
+
