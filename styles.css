@@ -462,4 +462,18 @@ nav {
     font-size: 1.1rem;
   }
 }
-        
+.calendar-mobile {
+  display: none;
+}
+.calendar-desktop {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .calendar-mobile {
+    display: block;
+  }
+  .calendar-desktop {
+    display: none;
+  }
+}
