@@ -5,10 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Villa Abeto – Availability</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra inline styles just for clarity – can be moved to styles.css */
+    .availability-info {
+      text-align: center;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .calendar-button {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--accent, #e07a5f);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .calendar-button:hover {
+      background: #b65a40;
+    }
+
+    /* Desktop calendar visible only on wider screens */
+    .calendar-wrap {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .calendar-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      .availability-info {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    
     <nav>
       <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
       <div class="nav-links">
@@ -20,29 +62,41 @@
         <a href="contact.html">Contact Us</a>
       </div>
     </nav>
-    
   </header>
 
-<main>
-  <section class="calendar-wrap">
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=da87c856d6df4f6f3475fcf4a6689cd6901a19a8a5ceae637fb3e6b44c5b6401%40group.calendar.google.com&ctz=Europe%2FLondon&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0"
-      frameborder="0"
-      scrolling="no"
-      width="100%"
-      height="600">
-    </iframe>
-  </section>
-</main>
+  <main>
+    <!-- MOBILE VERSION -->
+    <section class="availability-info">
+      <h1>Check Villa Availability</h1>
+      <p>
+        To view the most up-to-date booking information, please tap below to open our live calendar.
+      </p>
+      <a class="calendar-button" href="https://calendar.google.com/calendar/embed?src=da87c856d6df4f6f3475fcf4a6689cd6901a19a8a5ceae637fb3e6b44c5b6401@group.calendar.google.com&ctz=Europe/London" target="_blank">
+        📅 View Full Calendar
+      </a>
+      <p style="margin-top: 1.5rem;">
+        Or <a href="contact.html">contact us</a> to check your preferred dates.
+      </p>
+    </section>
 
+    <!-- DESKTOP VERSION -->
+    <section class="calendar-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=da87c856d6df4f6f3475fcf4a6689cd6901a19a8a5ceae637fb3e6b44c5b6401%40group.calendar.google.com&ctz=Europe%2FLondon&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0"
+        frameborder="0"
+        scrolling="no"
+        width="100%"
+        height="600">
+      </iframe>
+    </section>
+  </main>
 
-    <script>
-      const navToggle = document.querySelector('.nav-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      navToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('open');
-      });
-    </script>
-    
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
