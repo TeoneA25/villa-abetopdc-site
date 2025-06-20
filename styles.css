@@ -527,4 +527,20 @@ nav {
 .availability-info a:hover {
   text-decoration: underline;
 }
+.nav-mobile-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 0.75rem;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+/* Show only on mobile */
+@media (min-width: 900px) {
+  .nav-mobile-title {
+    display: none;
+  }
+}
 
