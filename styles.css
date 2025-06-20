@@ -12,6 +12,13 @@ body {
   color: #222;
 }
 
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
