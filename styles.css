@@ -481,4 +481,27 @@ nav {
   border: 0;
   height: 600px;
 }
+/* Ensure mobile availability section matches rest of site styling */
+.availability-info {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+.availability-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2d3436;
+}
+
+.availability-info a {
+  color: var(--accent, #e07a5f);
+  text-decoration: none;
+}
+
+.availability-info a:hover {
+  text-decoration: underline;
+}
 
