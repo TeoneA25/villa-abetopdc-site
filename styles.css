@@ -260,16 +260,17 @@ body.home .carousel {
   overflow: hidden;
 }
 
-.carousel h1, .carousel .hero-title {
-  background: rgba(0,0,0,0.45); /* semi-transparent black */
+.carousel h1,
+.carousel .hero-title {
+  background: rgba(0, 0, 0, 0.45);
   color: #fff;
-  padding: 1rem 2vw;
+  padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   display: inline-block;
   text-shadow:
-    0 2px 6px rgba(0,0,0,0.65),
-    0 4px 24px rgba(0,0,0,0.55);
-  font-size: 2.2rem;
+    0 2px 6px rgba(0, 0, 0, 0.65),
+    0 4px 24px rgba(0, 0, 0, 0.55);
+  font-size: clamp(1.2rem, 5vw, 2rem); /* 👈 Shrinks text on small screens */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -281,7 +282,9 @@ body.home .carousel {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   margin: 0;
+  line-height: 1.2;
 }
+
 .contact-hero {
   display: flex;
   flex-wrap: wrap;
