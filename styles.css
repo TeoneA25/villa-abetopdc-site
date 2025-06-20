@@ -253,8 +253,12 @@ body.home .carousel {
   max-width: none;
   border-radius: 0;
   margin: 0 auto;
-  aspect-ratio: 16 / 6; /* or adjust as needed */
+  height: 100vh;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
 }
+
 .carousel h1, .carousel .hero-title {
   background: rgba(0,0,0,0.45); /* semi-transparent black */
   color: #fff;
@@ -443,9 +447,11 @@ nav {
     transition: max-height 0.28s cubic-bezier(0.4,0,0.2,1);
   }
   .nav-links.open {
-    max-height: 500px;
-    padding-bottom: 0.6rem;
-  }
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 0.6rem;
+}
+
   .nav-links a {
     width: 95vw;
     margin: 0.3rem 0;
