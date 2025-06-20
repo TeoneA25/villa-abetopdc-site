@@ -188,8 +188,8 @@ html, body { height: 100% }
 .calendar-button {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--accent, #e07a5f);
-  color: white; /* ✅ This is what you're missing */
+  background-color: var(--accent, #e07a5f);
+  color: #ffffff !important;        /* ✅ Force visible text */
   text-decoration: none;
   padding: 0.75rem 1.25rem;
   border-radius: 6px;
@@ -199,11 +199,15 @@ html, body { height: 100% }
   line-height: 1.4;
   white-space: nowrap;
   transition: background 0.2s ease;
+  border: none;
 }
 
-.calendar-button:hover {
-  background: #b65a40;
+.calendar-button:hover,
+.calendar-button:focus {
+  background-color: #b65a40;
+  color: #ffffff !important;       /* ✅ Maintain text visibility on hover/focus */
 }
+
 
 /* ─────────────────────────────────────
    CONTACT FORM
